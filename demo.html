@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+
+/*
+function parseHTML(html) {
+    var div = document.createElement("div");
+
+    div.innerHTML = html;
+
+    var res = [];
+    for(var i = 0; i < div.childNodes.length; i++){
+        res.push( div.childNodes[ i ]);
+    }
+    return res;
+}
+
+//测试
+var list = parseHTML( '<div> 你好, 我是一个呗创建出来的 div </div><p>p</p>' );
+document.body.appendChild(list[0]);
+
+
+//封装将字符串转换成 DOM 对象的函数
+var parseHTML = (function(){
+    var div = document.createElement("div");
+
+    function parseHTMl(html) {
+        div.innerHTML = html;
+        var res = [];
+
+        for(var i = 0; i < div.childNodes.length; i++){
+            res.push( div.childNodes[i] );
+        }
+
+        div.innerHTML = "";
+        return res;
+    }
+
+    return parseHTML;
+})();
+*/
+
+//将字符串转换成DOM操作对象的方式
+var parseHTML = (function(){
+    var div = document.createElement("div");
+
+    function parseHTML(html) {
+        div.innerHTML = html;
+        var res = [];
+        for( var i =0; i < div.childNodes.length; i++){
+            res.push(childNodes[i]);
+        }
+        div.innerHTML = "";
+        return res;
+    }
+
+    return parseHTML();
+})();
+
+</script>
+</html>
